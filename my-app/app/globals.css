@@ -11,9 +11,6 @@
 
 body {
   font-family: "Work Sans", sans-serif;
-  /* background-image: url(assets/Bg.jpeg); */
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 body:has(.card[data-color="blue"]:hover) {
