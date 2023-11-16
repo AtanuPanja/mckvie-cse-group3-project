@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from "react";
-function Contact() {
+function ContactComponent() {
     const [form, setForm] = useState({ name: "", email: "", message: "" });
     const handleChange = () => { };
     const handleFocus = () => { };
@@ -94,4 +94,4 @@ function Contact() {
     )
 }
 
-export default Contact;
+export default ContactComponent;
