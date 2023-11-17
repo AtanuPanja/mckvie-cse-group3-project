@@ -1,7 +1,9 @@
-export default function About() {
+"use client";
+import AboutComponent from "@/components/About";
+export default function Contact() {
   return (
-    <div>
-      About here
-    </div>
-  )
+    <>
+      <AboutComponent />
+    </>
+  );
 }

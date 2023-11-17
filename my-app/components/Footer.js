@@ -69,10 +69,14 @@ export default function Footer() {
             </h2>
             <ul className="list-none">
               <li>
-                <a className="text-white hover:text-gray-800">Counterfeit Detection</a>
+                <a className="text-white hover:text-gray-800">
+                  Counterfeit Detection
+                </a>
               </li>
               <li>
-                <a className="text-white hover:text-gray-800">Warranty Service</a>
+                <a className="text-white hover:text-gray-800">
+                  Warranty Service
+                </a>
               </li>
             </ul>
           </div>
