@@ -1,0 +1,74 @@
+/* About.css */
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100vh;
+  padding: 20px;
+}
+
+.heading {
+  font-size: 50px;
+  font-weight: normal;
+  color: rgb(34, 33, 33);
+  margin-bottom: 20px;
+}
+
+.content-container {
+  display: flex;
+  width: 100%;
+}
+
+.left-panel {
+  width: 70%;
+  padding-right: 20px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin-left: 345px;
+}
+
+.menu li {
+  margin-right: 20px;
+  cursor: pointer;
+  color: black;
+  transition: color 0.3s, border-bottom 0.3s;
+  font-weight: bold;
+  font-size: large;
+  border-bottom: 2px solid rgb(216, 213, 221);
+}
+
+.menu li:hover {
+  color: indigo;
+  border-bottom: rgb(34, 33, 33);
+}
+
+/*
+.menu li {
+  margin-right: 20px;
+  cursor: pointer;
+  color: black;
+  position: relative;
+  border-bottom: 2px solid rgb(205, 202, 209); 
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.menu li:hover {
+  color: indigo;
+  border-bottom: 2px solid indigo;
+}
+.right-panel {
+  width: 30%;
+}*/
+
+.right-panel img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
