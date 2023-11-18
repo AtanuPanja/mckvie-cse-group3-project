@@ -44,6 +44,29 @@ const App = () => {
   const menuClickHandler = (menu) => {
     setSelectedMenu(menu);
   };
+  /*tuduk */
+  const ImageSection = ({ imageSrc, title, description }) => {
+    return (
+      <div className="relative group ">
+        <img
+          src={imageSrc}
+          alt={title}
+          className="object-cover object-center w-full h-full rounded-md transition-transform transform hover:scale-105"
+        />
+        <div className="absolute bottom-0 left-0 right-0 bg-gray-800 text-white p-4">
+          <h2 className="text-xl font-bold">{title}</h2>
+          <p>{description}</p>
+        </div>
+
+        <div className="absolute bottom-5 left-70 right-10 flex justify-between p-4">
+          <button className="text-white bg-indigo-500 px-3 py-1 rounded">
+            Know More
+          </button>
+        </div>
+      </div>
+    );
+  };
+  /*tuduk */
   useEffect(() => {
     const intervalId = setInterval(() => {
       changeImage("right"); // Auto-rotate to the next image every 3 seconds
@@ -1285,6 +1308,47 @@ const App = () => {
           </div>
         </div>
       </section>
+      <h1 className="heading">Uncover the Secrets Behind Our Vision</h1>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+        <ImageSection
+          imageSrc="https://lecourrier-du-soir.com/wp-content/uploads/2017/07/Success-Story.jpg"
+          title="Success Stories"
+          description="Unlocking Success Narratives, One Link at a Time."
+          className="rounded-md"
+        />
+        <ImageSection
+          imageSrc="https://images.squarespace-cdn.com/content/v1/5d530ceb33625c0001cb43de/1575563861399-DEMR82K8DZTGQIFM8WRM/Screen+Shot+2019-12-05+at+11.37.13+AM.png"
+          title="Industry Trends"
+          description="Guiding Trends, Illuminating Insights."
+        />
+        <ImageSection
+          imageSrc="https://www.business2community.com/wp-content/uploads/2017/02/13-150x150.png.png"
+          title="Social Relevance"
+          description="Connected Communities, Driving Change."
+        />
+        <ImageSection
+          imageSrc="https://img.securityinfowatch.com/files/base/cygnus/siw/image/2023/07/GettyImages_1398294814.64b9a74aac28c.png?auto=format,compress&fit=fill&fill=blur&w=1200&h=630"
+          title="Data Privacy"
+          description="Guardians of Privacy, Architects of Compliance Your Shield."
+        />
+        <ImageSection
+          imageSrc="https://np-royalfloraholland-production.s3-eu-west-1.amazonaws.com/Nieuws-2022/Week-9/_1366xAUTO_fit_center-center_80_none/FloriPEFCR-week-9-2022621c79a136bfa9.70542623.jpeg"
+          title="Environmental Impact"
+          description="Green Footprints: Sowing Seeds for a Sustainable Tomorrow."
+        />
+        <ImageSection
+          imageSrc="https://learnsure.ai/wp-content/uploads/2022/02/Hybrid-Training-1.svg"
+          title="Training & Support"
+          description="Empowering Growth: Where Every Question Finds Its Answer."
+        />
+        {/*
+        <ImageSection
+          imageSrc="https://www.iimtindia.net/Blog/wp-content/uploads/2022/05/Blockchain.jpg"
+          title="Training & Support"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              />*/}
+        {/* Add more ImageSection components for the remaining images */}
+      </div>
       <section class="text-gray-600 body-font">
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-col text-center w-full mb-20">
