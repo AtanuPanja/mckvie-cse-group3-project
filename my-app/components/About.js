@@ -1,14 +1,56 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./About.css"; // Import your CSS file
 import Link from "next/link";
 const App = () => {
   const [selectedMenu, setSelectedMenu] = useState("Overview");
 
   const menuItems = ["Overview", "Technology in use", "Future Goals", "FAQs"];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
+  const images = [
+    "https://www.projectmanager.com/wp-content/uploads/2019/06/190625_Blog_Feature_Change_Management.jpg",
+    "https://m.foolcdn.com/media/dubs/images/original_imageshttpsg.foolcdn.comeditorialimag.width-880_6e7qpmQ.jpg",
+    "https://www.yondu.com/wp-content/uploads/2021/04/creative-abstract-background-technology-blockchain-ultraviolet-background-scaled.jpg",
+    "https://img.freepik.com/free-vector/logistics-hub-abstract-concept-vector-illustration-global-logistics-center-commercial-warehouse-distribution-hub-supply-chain-management-transportation-cost-optimization-abstract-metaphor_335657-1791.jpg",
+    "https://media.licdn.com/dms/image/C5612AQE77qsyHOTUDQ/article-cover_image-shrink_720_1280/0/1520127752904?e=2147483647&v=beta&t=dvLSDTwjZzbIFY8tXE9WxUN074BTA_-dRkQ-8-_9VCM",
+    "https://blog.vantagecircle.com/content/images/2023/01/10-Smart-Ways-to-Better-Team-Collaboration-1.png",
+    "https://th.bing.com/th/id/OIG.i5rETr4oiOtZjNnxfcSe?pid=ImgGn",
+    "https://th.bing.com/th/id/OIG.zgCSA0f2qNbQzSrED7HD?w=1024&h=1024&rs=1&pid=ImgDetMain",
+    "https://th.bing.com/th/id/OIG.6fS2DHpq4qbERWzRwdtq?w=1024&h=1024&rs=1&pid=ImgDetMain",
+    "https://th.bing.com/th/id/OIG.q8s5FcKc0HYH10w2syMo?pid=ImgGn",
+    "https://th.bing.com/th/id/OIG.vmcag8CzXF1aCK5JUpNP?pid=ImgGn",
+    "https://th.bing.com/th/id/OIG.LKfr_.1IqANlZqT7mQwC?w=1024&h=1024&rs=1&pid=ImgDetMain",
+    "https://th.bing.com/th/id/OIG.jkjeL5medO_pTO0nT1pT?w=1024&h=1024&rs=1&pid=ImgDetMain",
+    "https://th.bing.com/th/id/OIG.5YsCpXDQDQGvU82px5rs?pid=ImgGn",
+  ];
+  const changeImage = (direction) => {
+    if (!isTransitioning) {
+      setIsTransitioning(true);
+
+      setCurrentImageIndex((prevIndex) => {
+        if (direction === "left") {
+          return (prevIndex - 1 + images.length) % images.length;
+        } else {
+          return (prevIndex + 1) % images.length;
+        }
+      });
+
+      setTimeout(() => {
+        setIsTransitioning(false);
+      }, 4000); // Adjust the time based on your transition duration
+    }
+  };
   const menuClickHandler = (menu) => {
     setSelectedMenu(menu);
   };
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      changeImage("right"); // Auto-rotate to the next image every 3 seconds
+    }, 4000);
+
+    return () => clearInterval(intervalId); // Cleanup interval on component unmount
+  }, []);
 
   return (
     <div className="app-container">
@@ -30,12 +72,26 @@ const App = () => {
           {selectedMenu === "Overview" && (
             <section class="text-gray-600 body-font">
               <div class="container px-5 py-24 mx-auto flex flex-wrap">
-                <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+                <div className="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden relative">
+                  <button
+                    onClick={() => changeImage("left")}
+                    className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 p-2 rounded-full text-white"
+                  >
+                    {"<"}
+                  </button>
                   <img
                     alt="feature"
-                    class="object-cover object-center h-full w-full"
-                    src="https://www.projectmanager.com/wp-content/uploads/2019/06/190625_Blog_Feature_Change_Management.jpg"
+                    className={`object-cover object-center h-full w-full transition-opacity duration-500 ease-in-out ${
+                      isTransitioning ? "opacity-5" : "opacity-100"
+                    }`}
+                    src={images[currentImageIndex]}
                   />
+                  <button
+                    onClick={() => changeImage("right")}
+                    className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 p-2 rounded-full text-white"
+                  >
+                    {">"}
+                  </button>
                 </div>
                 <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
                   <div class="flex flex-col mb-10 lg:items-start items-center">
@@ -188,12 +244,26 @@ const App = () => {
           {selectedMenu === "Technology in use" && (
             <section class="text-gray-600 body-font">
               <div class="container px-5 py-24 mx-auto flex flex-wrap">
-                <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+                <div className="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden relative">
+                  <button
+                    onClick={() => changeImage("left")}
+                    className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 p-2 rounded-full text-white"
+                  >
+                    {"<"}
+                  </button>
                   <img
                     alt="feature"
-                    class="object-cover object-center h-full w-full"
-                    src="https://www.yondu.com/wp-content/uploads/2021/04/creative-abstract-background-technology-blockchain-ultraviolet-background-scaled.jpg"
+                    className={`object-cover object-center h-full w-full transition-opacity duration-500 ease-in-out ${
+                      isTransitioning ? "opacity-5" : "opacity-100"
+                    }`}
+                    src={images[currentImageIndex]}
                   />
+                  <button
+                    onClick={() => changeImage("right")}
+                    className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 p-2 rounded-full text-white"
+                  >
+                    {">"}
+                  </button>
                 </div>
                 <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
                   <div class="flex flex-col mb-10 lg:items-start items-center">
@@ -385,12 +455,26 @@ const App = () => {
           {selectedMenu === "Future Goals" && (
             <section class="text-gray-600 body-font">
               <div class="container px-5 py-24 mx-auto flex flex-wrap">
-                <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+                <div className="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden relative">
+                  <button
+                    onClick={() => changeImage("left")}
+                    className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 p-2 rounded-full text-white"
+                  >
+                    {"<"}
+                  </button>
                   <img
                     alt="feature"
-                    class="object-cover object-center h-full w-full"
-                    src="https://media.licdn.com/dms/image/C5612AQE77qsyHOTUDQ/article-cover_image-shrink_720_1280/0/1520127752904?e=2147483647&v=beta&t=dvLSDTwjZzbIFY8tXE9WxUN074BTA_-dRkQ-8-_9VCM"
+                    className={`object-cover object-center h-full w-full transition-opacity duration-500 ease-in-out ${
+                      isTransitioning ? "opacity-5" : "opacity-100"
+                    }`}
+                    src={images[currentImageIndex]}
                   />
+                  <button
+                    onClick={() => changeImage("right")}
+                    className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 p-2 rounded-full text-white"
+                  >
+                    {">"}
+                  </button>
                 </div>
                 <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
                   <div class="flex flex-col mb-10 lg:items-start items-center">
@@ -1223,8 +1307,10 @@ const App = () => {
                   </h2>
                   <h3 class="text-gray-500 mb-3">UI Developer</h3>
                   <p class="mb-4">
-                    DIY tote bag drinking vinegar cronut adaptogen squid fanny
-                    pack vaporware.
+                    Navigating the complexities of integrating blockchain into
+                    our supply chain, I orchestrated seamless collaboration,
+                    ensuring each team member was a vital link in the successful
+                    implementation.
                   </p>
                   <span class="inline-flex">
                     <a class="text-gray-500">
@@ -1253,7 +1339,11 @@ const App = () => {
                         <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
                       </svg>
                     </a>
-                    <a class="ml-2 text-gray-500">
+                    <a
+                      href="https://www.linkedin.com/in/arindam-sal-065289194/"
+                      target="blank_"
+                      class="ml-2 text-gray-500"
+                    >
                       <svg
                         fill="none"
                         stroke="currentColor"
@@ -1263,7 +1353,7 @@ const App = () => {
                         class="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
-                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"></path>{" "}
                       </svg>
                     </a>
                   </span>
@@ -1283,8 +1373,10 @@ const App = () => {
                   </h2>
                   <h3 class="text-gray-500 mb-3">UI Developer</h3>
                   <p class="mb-4">
-                    DIY tote bag drinking vinegar cronut adaptogen squid fanny
-                    pack vaporware.
+                    As a blockchain developer, I coded the secure backbone of
+                    our supply chain, transforming abstract concepts into a
+                    decentralized reality, forging a transparent and resilient
+                    system.
                   </p>
                   <span class="inline-flex">
                     <a class="text-gray-500">
@@ -1313,7 +1405,11 @@ const App = () => {
                         <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
                       </svg>
                     </a>
-                    <a class="ml-2 text-gray-500">
+                    <a
+                      href="https://www.linkedin.com/in/atanu-panja-2b081a200/"
+                      target="blank_"
+                      class="ml-2 text-gray-500"
+                    >
                       <svg
                         fill="none"
                         stroke="currentColor"
@@ -1323,7 +1419,7 @@ const App = () => {
                         class="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
-                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"></path>{" "}
                       </svg>
                     </a>
                   </span>
@@ -1343,8 +1439,10 @@ const App = () => {
                   </h2>
                   <h3 class="text-gray-500 mb-3">UI Developer</h3>
                   <p class="mb-4">
-                    DIY tote bag drinking vinegar cronut adaptogen squid fanny
-                    pack vaporware.
+                    Streamlining logistics through blockchain, I witnessed a
+                    paradigm shift in efficiency, optimizing routes and reducing
+                    lead times, ultimately enhancing the overall distribution
+                    network.
                   </p>
                   <span class="inline-flex">
                     <a class="text-gray-500">
@@ -1373,7 +1471,11 @@ const App = () => {
                         <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
                       </svg>
                     </a>
-                    <a class="ml-2 text-gray-500">
+                    <a
+                      href="https://www.linkedin.com/in/atreyee-kar-6535b5215/"
+                      target="blank_"
+                      class="ml-2 text-gray-500"
+                    >
                       <svg
                         fill="none"
                         stroke="currentColor"
@@ -1383,7 +1485,7 @@ const App = () => {
                         class="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
-                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"></path>{" "}
                       </svg>
                     </a>
                   </span>
@@ -1403,8 +1505,10 @@ const App = () => {
                   </h2>
                   <h3 class="text-gray-500 mb-3">UI Developer</h3>
                   <p class="mb-4">
-                    DIY tote bag drinking vinegar cronut adaptogen squid fanny
-                    pack vaporware.
+                    Driving sustainability initiatives in our supply chain, I
+                    witnessed a powerful synergy between blockchain and
+                    eco-conscious practices, ensuring our impact on the
+                    environment was as efficient as our operations.
                   </p>
                   <span class="inline-flex">
                     <a class="text-gray-500">
@@ -1433,7 +1537,11 @@ const App = () => {
                         <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
                       </svg>
                     </a>
-                    <a class="ml-2 text-gray-500">
+                    <a
+                      href="https://www.linkedin.com/in/sourav-chandra-9402751b2/"
+                      target="blank_"
+                      class="ml-2 text-gray-500"
+                    >
                       <svg
                         fill="none"
                         stroke="currentColor"
@@ -1443,7 +1551,7 @@ const App = () => {
                         class="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
-                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"></path>{" "}
                       </svg>
                     </a>
                   </span>
@@ -1463,8 +1571,10 @@ const App = () => {
                   </h2>
                   <h3 class="text-gray-500 mb-3">UI Developer</h3>
                   <p class="mb-4">
-                    DIY tote bag drinking vinegar cronut adaptogen squid fanny
-                    pack vaporware.
+                    Securing our supply chain's digital fortress, I fortified
+                    our system with robust encryption and compliance measures,
+                    ensuring the trust and privacy of every transaction within
+                    the blockchain network.
                   </p>
                   <span class="inline-flex">
                     <a class="text-gray-500">
@@ -1493,7 +1603,11 @@ const App = () => {
                         <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
                       </svg>
                     </a>
-                    <a class="ml-2 text-gray-500">
+                    <a
+                      href="https://www.linkedin.com/in/ishika-ghosh-a6a55b236/"
+                      target="blank_"
+                      class="ml-2 text-gray-500"
+                    >
                       <svg
                         fill="none"
                         stroke="currentColor"
