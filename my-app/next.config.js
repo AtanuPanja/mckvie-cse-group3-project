@@ -12,6 +12,12 @@ const nextConfig = {
         hostname: "reqres.in",
         port: "",
         pathname: "/**"
+      },
+      {
+        protocol: "https",
+        hostname: "lecourrier-du-soir.com",
+        port: "",
+        pathname: "/wp-content/uploads/2017/07/Success-Story.jpg"
       }
     ],
   },
