@@ -19,20 +19,20 @@ function Slide({ heading, content, image }) {
           </h1>
           <p className="mb-8 leading-relaxed">{content}</p>
           <div className="">
-            <button className="ml-4 inline-flex justify-center items-center text-indigo-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-200 hover:text-indigo-900 rounded text-lg">
-              Learn More
+            <a href="/about" className="ml-4 inline-flex justify-center items-center text-indigo-700 bg-gray-100 py-2 px-6 border-0 rounded text-lg hover:text-gray-100 hover:bg-transparent hover:outline hover:outline-gray-100 focus:text-gray-100 focus:bg-transparent focus:outline focus:outline-gray-100 transition-all">
+              <span className="inline-block">Learn More</span>
               <svg
                 fill="none"
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 stroke-width="2"
                 className="w-4 h-4 ml-1"
                 viewBox="0 0 24 24"
               >
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
               </svg>
-            </button>
+            </a>
           </div>
         </div>
         <div
