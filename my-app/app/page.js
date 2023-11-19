@@ -2,7 +2,7 @@ import CustomerSection from "@/components/CustomerSection";
 import Slide from "@/components/Slide";
 import DetailsSection from "@/components/DetailsSection";
 import HeroSlider from "@/components/HeroSlider";
-import TestimonialsSection from "@/components/RatingSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 
 export default function Home() {
   const homeSliderData = [
