@@ -8,13 +8,13 @@ export default function Footer() {
             {/* facebook icon */}
             <a
               href="/"
-              className="transition-colors text-white rounded-lg hover:text-blue-600 hover:bg-gray-100"
+              className="transition-colors text-white rounded-lg hover:text-blue-600 hover:bg-gray-100 focus:text-blue-600 focus:bg-gray-100 focus:outline-none"
             >
               {/* <svg
                 fill="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 className="w-10 h-10"
                 viewBox="0 0 24 24"
               >
@@ -32,13 +32,13 @@ export default function Footer() {
             {/* twitter icon - older bird icon */}
             <a
               href="/"
-              className="ml-4 rounded-lg transition-colors text-white hover:text-blue-400 hover:bg-gray-100"
+              className="ml-4 rounded-lg transition-colors text-white hover:text-blue-400 hover:bg-gray-100 focus:text-blue-400 focus:bg-gray-100 focus:outline-none"
             >
               {/* <svg
                 fill="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 className="w-10 h-10"
                 viewBox="0 0 24 24"
               >
@@ -58,7 +58,7 @@ export default function Footer() {
             {/* boxicons.com */}
             <a
               href="/"
-              className="ml-4 rounded-lg bg-gradient-to-r transition-colors text-white hover:from-yellow-500 hover:to-pink-500"
+              className="ml-4 rounded-lg bg-gradient-to-r transition-colors text-white hover:from-yellow-500 hover:to-pink-500 focus:from-yellow-500 focus:to-pink-500 focus:outline-none"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -76,14 +76,14 @@ export default function Footer() {
             {/* boxicons.com */}
             <a
               href="/"
-              className="ml-4 rounded-lg transition-colors text-white hover:bg-gray-100 hover:text-blue-800"
+              className="ml-4 rounded-lg transition-colors text-white hover:bg-gray-100 hover:text-blue-800 focus:bg-gray-100 focus:text-blue-800 focus:outline-none"
             >
               {/* <svg
                 fill="currentColor"
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="0"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="0"
                 className="w-10 h-10"
                 viewBox="0 0 24 24"
               >
@@ -112,12 +112,12 @@ export default function Footer() {
             </h2>
             <ul className="list-none">
               <li>
-                <a href="/services" className="text-white hover:underline">
+                <a href="/services" className="text-white outline-none hover:underline focus:underline">
                   Counterfeit Detection
                 </a>
               </li>
               <li>
-                <a href="/services" className="text-white hover:underline">
+                <a href="/services" className="text-white outline-none hover:underline focus:underline">
                   Warranty Service
                 </a>
               </li>
