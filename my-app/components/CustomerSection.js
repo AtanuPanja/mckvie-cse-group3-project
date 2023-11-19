@@ -8,15 +8,15 @@ export default function CustomerSection() {
           </h2>
           <div className=" flex justify-around px-5 pt-5 flex-wrap rounded-lg">
             <figure className="m-10">
-              <Image src="/shopping-bag.png" width="100" height="100" />
+              <Image src="/shopping-bag.png" alt="Shopper" title="Shopper" width="100" height="100" />
               <figcaption className="text-center">Shopper</figcaption>
             </figure>
             <figure className="m-10">
-              <Image src="/online-store.png" width="100" height="100" />
+              <Image src="/online-store.png" alt="EStore" title="EStore" width="100" height="100" />
               <figcaption className="text-center">EStore</figcaption>
             </figure>
             <figure className="m-10">
-              <Image src="/mall.png" width="100" height="100" />
+              <Image src="/mall.png" alt="GenZ mall" title="GenZ mall" width="100" height="100" />
               <figcaption className="text-center">GenZ mall</figcaption>
             </figure>
           </div>
