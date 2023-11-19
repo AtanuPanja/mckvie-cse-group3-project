@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Navbar/>
         {/* back to top link */}
-        <a href="#" className="inline-block rounded-full px-5 py-3  fixed bottom-8 right-5 bg-indigo-800 text-white">Back to Top &uarr;</a>
+        <a href="#" className="inline-block rounded-full px-5 py-3  fixed bottom-8 right-5 bg-indigo-800 text-white z-50">Back to Top &uarr;</a>
         {children}
         <Footer />
       </body>
