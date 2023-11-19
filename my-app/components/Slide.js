@@ -26,7 +26,7 @@ function Slide({ heading, content, image }) {
                 stroke="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                stroke-width="2"
+                strokeWidth="2"
                 className="w-4 h-4 ml-1"
                 viewBox="0 0 24 24"
               >
