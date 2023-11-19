@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function RatingSection() {
+function TestimonialsSection() {
   return (
     <>
       <section className="bg-gray-100 text-gray-600 body-font">
@@ -146,3 +146,5 @@ export default function RatingSection() {
     </>
   );
 }
+
+export default TestimonialsSection;
