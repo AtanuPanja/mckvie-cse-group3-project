@@ -13,7 +13,7 @@ export default function Footer() {
               {/* <svg
                 fill="currentColor"
                 strokeLinecap="round"
-                strokeLinejoin="round"
+                strokeLinejoin=="round"
                 strokeWidth="2"
                 className="w-10 h-10"
                 viewBox="0 0 24 24"
@@ -37,7 +37,7 @@ export default function Footer() {
               {/* <svg
                 fill="currentColor"
                 strokeLinecap="round"
-                strokeLinejoin="round"
+                strokeLinejoin=="round"
                 strokeWidth="2"
                 className="w-10 h-10"
                 viewBox="0 0 24 24"
@@ -82,7 +82,7 @@ export default function Footer() {
                 fill="currentColor"
                 stroke="currentColor"
                 strokeLinecap="round"
-                strokeLinejoin="round"
+                strokeLinejoin=="round"
                 strokeWidth="0"
                 className="w-10 h-10"
                 viewBox="0 0 24 24"
