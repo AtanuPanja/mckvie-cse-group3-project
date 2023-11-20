@@ -1,3 +1,4 @@
+import Link from "next/link";
 function DetailsSection() {
   return (
     <section className="bg-gray-100 text-gray-600 body-font">
@@ -7,7 +8,9 @@ function DetailsSection() {
             Unleashing Supply Chain Brilliance
           </h1>
           <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-            Empower your supply chain with our innovative features, driving efficiency and excellence in every step. Unleash the power of next-gen features for a seamless supply chain experience.
+            Empower your supply chain with our innovative features, driving
+            efficiency and excellence in every step. Unleash the power of
+            next-gen features for a seamless supply chain experience.
           </p>
         </div>
         <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
@@ -44,9 +47,7 @@ function DetailsSection() {
                 <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                 <path d="M22 4L12 14.01l-3-3"></path>
               </svg>
-              <span className="title-font font-medium">
-                Increased Security
-              </span>
+              <span className="title-font font-medium">Increased Security</span>
             </div>
           </div>
           <div className="p-2 sm:w-1/2 w-full">
@@ -101,7 +102,9 @@ function DetailsSection() {
                 <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
                 <path d="M22 4L12 14.01l-3-3"></path>
               </svg>
-              <span className="title-font font-medium">Sustainable and Ethical Practices</span>
+              <span className="title-font font-medium">
+                Sustainable and Ethical Practices
+              </span>
             </div>
           </div>
           <div className="p-2 sm:w-1/2 w-full">
@@ -124,9 +127,11 @@ function DetailsSection() {
             </div>
           </div>
         </div>
-        <button className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-          Find out more
-        </button>
+        <Link href="/about" className="mr-5 ">
+          <button className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+            Find out more
+          </button>
+        </Link>
       </div>
     </section>
   );
