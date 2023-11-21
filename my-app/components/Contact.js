@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useRef } from "react";
 import emailjs from '@emailjs/browser'
+import swal from 'sweetalert'
 
 
 
@@ -14,25 +15,36 @@ function ContactComponent() {
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoading(true);
+
         emailjs.send(
             "service_9wfr8fh",
             "template_2a4u4lv",
             {
                 from_name: form.name,
                 to_name: "Project_team-3",
+                from_contact: form.number,
                 from_email: form.email,
                 to_email: "noobragang311@gmail.com",
                 message: form.message,
             },
             "pbFRe0ViZftzD7JjN"
         ).then(() => {
-            setLoading(false);
+            swal({
+                title: "Message send Successfully",
+                icon: "success",
+                buttons: false,
+                timer: 3000
+            })
             setForm({ name: "", email: "", number: "", message: "" });
         }).catch((error) => {
-            setLoading(false);
-            console.log(error);
-
+            swal({
+                title: "Error",
+                icon: "Error",
+                buttons: false,
+                timer: 3000
+            })
         })
+        setLoading(false);
     }
 
 
@@ -47,7 +59,7 @@ function ContactComponent() {
                 <h1 className='head-text text-center text-gray-300'>Contact info</h1>
                 <p className="text-gray-300 mt-3 p-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis libero perspiciatis aperiam iure harum obcaecati cumque eos earum repellat inventore.</p>
                 <div className='m-5 flex justify-center flex-col gap-10'>
-                    <p className='flex items-center justify-start text-slate-200 gap-3'><a className="text-white">
+                    <div className='flex items-center justify-start text-slate-200 gap-3'><a className="text-white">
                         <svg
                             fill="currentColor"
                             strokeLinecap="round"
@@ -60,8 +72,8 @@ function ContactComponent() {
                         </svg>
                     </a>
                         <p>mckviecse2024@gmail.com</p>
-                    </p>
-                    <p className='flex items-center justify-start text-slate-200 gap-3'>
+                    </div>
+                    <div className='flex items-center justify-start text-slate-200 gap-3'>
                         <a className="text-white">
                             <svg
                                 fill="currentColor"
@@ -75,8 +87,8 @@ function ContactComponent() {
                             </svg>
                         </a>
                         <p>9876543210</p>
-                    </p>
-                    <p className='flex items-center justify-start text-slate-200 gap-3'>
+                    </div>
+                    <div className='flex items-center justify-start text-slate-200 gap-3'>
                         <a className="text-white">
                             <svg
                                 fill="currentColor"
@@ -90,7 +102,7 @@ function ContactComponent() {
                             </svg>
                         </a>
                         <p>Howrah,West Bengal</p>
-                    </p>
+                    </div>
                 </div>
                 {/* social Links */}
                 <div className="f" >
@@ -237,7 +249,7 @@ function ContactComponent() {
                                 onFocus={handleFocus}
                                 onBlur={handleBlur}
                             >
-                                {loading ? "Sending..." : "Submit"}
+                                {loading ? "Sending......." : "Submit"}
                             </button>
                         </form>
                     </div>
