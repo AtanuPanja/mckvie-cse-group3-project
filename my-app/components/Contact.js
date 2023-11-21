@@ -50,9 +50,9 @@ function ContactComponent() {
                     <p className='flex items-center justify-start text-slate-200 gap-3'><a className="text-white">
                         <svg
                             fill="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             className="w-10 h-10"
                             viewBox="0 0 24 24"
                         >
@@ -65,9 +65,9 @@ function ContactComponent() {
                         <a className="text-white">
                             <svg
                                 fill="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
                                 className="w-10 h-10"
                                 viewBox="0 0 24 24"
                             >
@@ -80,13 +80,13 @@ function ContactComponent() {
                         <a className="text-white">
                             <svg
                                 fill="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
                                 className="w-10 h-10"
                                 viewBox="0 0 24 24"
                             >
-                                <path d="M11.42 21.815a1.004 1.004 0 0 0 1.16 0C12.884 21.598 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.996c-.029 6.444 7.116 11.602 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.004.021 4.438-4.388 8.423-6 9.731-1.611-1.308-6.021-5.293-6-9.735 0-3.309 2.691-6 6-6z"></path><path d="M11 14h2v-3h3V9h-3V6h-2v3H8v2h3z"></path>
+                                <path d="M12 2C7.589 2 4 5.589 4 9.995 3.971 16.44 11.696 21.784 12 22c0 0 8.029-5.56 8-12 0-4.411-3.589-8-8-8zm0 12c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"></path>
                             </svg>
                         </a>
                         <p>Howrah,West Bengal</p>
@@ -98,9 +98,9 @@ function ContactComponent() {
                         <a className="text-white hover:bg-pink-400 focus:bg-pink-400 rounded-lg p-2">
                             <svg
                                 fill="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
                                 className="w-5 h-5"
                                 viewBox="0 0 24 24"
                             >
@@ -110,9 +110,9 @@ function ContactComponent() {
                         <a className="ml-3 text-white hover:bg-pink-400 focus:bg-pink-400 rounded-lg p-2 ">
                             <svg
                                 fill="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
                                 className="w-5 h-5"
                                 viewBox="0 0 24 24"
                             >
@@ -123,9 +123,9 @@ function ContactComponent() {
                             <svg
                                 fill="none"
                                 stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
                                 className="w-5 h-5"
                                 viewBox="0 0 24 24"
                             >
@@ -137,9 +137,9 @@ function ContactComponent() {
                             <svg
                                 fill="currentColor"
                                 stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="0"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="0"
                                 className="w-5 h-5"
                                 viewBox="0 0 24 24"
                             >
