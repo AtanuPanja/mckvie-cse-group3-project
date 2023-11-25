@@ -53,13 +53,13 @@ const About = () => {
           alt={title}
           className="object-cover object-center w-full h-full rounded-md transition-transform transform hover:scale-105"
         />
-        <div className="absolute bottom-0 left-0 right-0 bg-gray-800 text-white p-4">
+        <div className="absolute bottom-0 left-0 right-0 bg-gray-800 text-white p-4 first">
           <h2 className="text-xl font-bold">{title}</h2>
           <p>{description}</p>
         </div>
 
-        <div className="absolute bottom-5 left-70 right-10 flex justify-between p-4">
-          <button className="text-white bg-indigo-500 px-3 py-1 rounded">
+        <div className="absolute bottom-5 left-70 right-10 flex justify-between p-4 ">
+          <button className="text-white bg-indigo-500 px-3 py-1 rounded second">
             Know More
           </button>
         </div>
@@ -1250,12 +1250,12 @@ const About = () => {
         </div>
       </section>
       <h1 className="heading">Uncover the Secrets Behind Our Vision</h1>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
-        <ImageSection
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 myGrid">
+        <ImageSection 
           imageSrc="https://lecourrier-du-soir.com/wp-content/uploads/2017/07/Success-Story.jpg"
-          title="Success Stories"
-          description="Unlocking Success Narratives, One Link at a Time."
-          className="rounded-md"
+          className="rounded-md HelloWorld"
+          title="Industry Trends"
+          description="Guiding Trends, Illuminating Insights."
         />
         <ImageSection
           imageSrc="https://images.squarespace-cdn.com/content/v1/5d530ceb33625c0001cb43de/1575563861399-DEMR82K8DZTGQIFM8WRM/Screen+Shot+2019-12-05+at+11.37.13+AM.png"
@@ -1282,6 +1282,7 @@ const About = () => {
           title="Training & Support"
           description="Empowering Growth: Where Every Question Finds Its Answer."
         />
+       
         {/*
         <ImageSection
           imageSrc="https://www.iimtindia.net/Blog/wp-content/uploads/2022/05/Blockchain.jpg"
@@ -1290,6 +1291,10 @@ const About = () => {
               />*/}
         {/* Add more ImageSection components for the remaining images */}
       </div>
+      <div className="flex justify-center items-center"><button className="text-white bg-indigo-500 px-3 py-1 rounded third">
+            Know More
+          </button>
+          </div>
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">
@@ -1355,7 +1360,7 @@ const About = () => {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth="2"
-                        className="w-5 h-5"
+                        className="w-6 h-7"
                         viewBox="0 0 24 24"
                       >
                         <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"></path>{" "}
@@ -1374,7 +1379,7 @@ const About = () => {
                 />
                 <div className="w-full">
                   <h2 className="title-font font-medium text-lg text-gray-900">
-                    Hii, I'm Atanua
+                    Hii, I'm Atanu
                   </h2>
                   <h3 className="text-gray-500 mb-3">UI Developer</h3>
                   <p className="mb-4">
@@ -1421,7 +1426,7 @@ const About = () => {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth="2"
-                        className="w-5 h-5"
+                        className="w-6 h-7"
                         viewBox="0 0 24 24"
                       >
                         <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"></path>{" "}
@@ -1487,7 +1492,7 @@ const About = () => {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth="2"
-                        className="w-5 h-5"
+                        className="w-6 h-7"
                         viewBox="0 0 24 24"
                       >
                         <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"></path>{" "}
@@ -1553,7 +1558,7 @@ const About = () => {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth="2"
-                        className="w-5 h-5"
+                        className="w-6 h-7"
                         viewBox="0 0 24 24"
                       >
                         <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"></path>{" "}
@@ -1619,7 +1624,7 @@ const About = () => {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth="2"
-                        className="w-5 h-5"
+                        className="w-6 h-7"
                         viewBox="0 0 24 24"
                       >
                         <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
