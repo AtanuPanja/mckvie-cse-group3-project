@@ -3,6 +3,7 @@ import Slide from "@/components/Slide";
 import DetailsSection from "@/components/DetailsSection";
 import HeroSlider from "@/components/HeroSlider";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import HeroSection from "@/components/HeroSection";
 
 export default function Home() {
   const homeSliderData = [
@@ -27,14 +28,15 @@ export default function Home() {
   ];
 
   return (
-    <main>
+    <main className="pt-10">
+      <HeroSection />
       {/* <Hero heading="Heading"/> */}
-      <HeroSlider slides={homeSliderData} />
+      {/* <HeroSlider slides={homeSliderData} /> */}
       <CustomerSection />
-      <hr />
+      {/* <hr />
       <DetailsSection />
       <hr />
-      <TestimonialsSection />
+      <TestimonialsSection /> */}
     </main>
   );
 }

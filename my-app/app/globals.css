@@ -3,6 +3,103 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+* html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a{
+  color: unset;
+  text-decoration: none;
+}
+
+.gradient-bg-welcome {
+  
+  background-color: #0f0e13;
+  background-image:
+    radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
+    radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+}
+.text_gradient {
+  background: radial-gradient(64.18% 64.18% at 71.16% 35.69%,
+      #def9fa 0.89%,
+      #bef3f5 17.23%,
+      #9dedf0 42.04%,
+      #7de7eb 55.12%,
+      #5ce1e6 71.54%,
+      #33bbcf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gradient-bg-nav{
+  background-color: rgb(23, 28, 42);
+}
+
+.gradient-bg-services {
+  background-color: #0f0e13;
+  background-image:
+    radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
+    radial-gradient(at 50% 100%, hsla(225, 39%, 25%, 1) 0, transparent 50%);
+}
+
+.gradient-bg-transactions {
+  background-color: #0f0e13;
+  background-image:
+    radial-gradient(at 0% 100%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
+    radial-gradient(at 50% 0%, hsla(225, 39%, 25%, 1) 0, transparent 50%);
+}
+
+.gradient-bg-footer {
+  background-color: #0f0e13;
+  background-image:
+    radial-gradient(at 0% 100%, hsla(253, 16%, 7%, 1) 0, transparent 53%),
+    radial-gradient(at 50% 150%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+}
+
+.blue-glassmorphism {
+  background: rgb(39, 51, 89, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* white glassmorphism */
+.white-glassmorphism {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.eth-card {
+  background-color: #a099ff;
+  background-image:
+    radial-gradient(at 83% 67%, rgb(152, 231, 156) 0, transparent 58%),
+    radial-gradient(at 67% 20%, hsla(357, 94%, 71%, 1) 0, transparent 59%),
+    radial-gradient(at 88% 35%, hsla(222, 81%, 65%, 1) 0, transparent 50%),
+    radial-gradient(at 31% 91%, hsla(9, 61%, 61%, 1) 0, transparent 52%),
+    radial-gradient(at 27% 71%, hsla(336, 91%, 65%, 1) 0, transparent 49%),
+    radial-gradient(at 74% 89%, hsla(30, 98%, 65%, 1) 0, transparent 51%),
+    radial-gradient(at 53% 75%, hsla(174, 94%, 68%, 1) 0, transparent 45%);
+}
+
+
+
 
 
 :root {
@@ -53,11 +150,11 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .input {
-    @apply bg-white border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2.5 font-normal shadow-card;
+    @apply bg-transparent border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2.5 font-normal shadow-card;
   }
 
   .textarea {
-    @apply block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:ring-blue-500 focus:border-blue-500 mt-2.5 font-normal shadow-card;
+    @apply block p-2.5 w-full text-sm text-gray-900 bg-transparent rounded-lg border border-gray-200 focus:ring-blue-500 focus:border-blue-500 mt-2.5 font-normal shadow-card;
   }
 
   .btn {
@@ -105,16 +202,26 @@ body:has(.card[data-color="green"]:hover) {
 }
 .left-side{
   width: 50%;
-  background-image: url("../assets/Bg.jpeg");
   background-size: cover;
+  padding:2rem;
+  margin-top: 2rem;
 
 }
 .right-side{
   /* display: flex; */
-  width: 60%;
+ width: 60%;
+ padding: 0px 50px;
 }
-.f{
+/* .f{
   margin-top: 18rem;
+} */
+.max_container2{
+  margin-left: auto;
+    margin-right: auto;
+    min-height: calc(100vh - 80px);
+    max-width: 64rem;
+    padding-left: 2em;
+    padding-top: 50px !important;
 }
 
 @media only screen and (max-width: 768px) {
@@ -133,7 +240,6 @@ body:has(.card[data-color="green"]:hover) {
   }
   .right-side{
     width: 100%;
-    text-align: center;
   }
   .f{
     margin-top: 6rem;
@@ -170,7 +276,6 @@ body:has(.card[data-color="green"]:hover) {
   }
   .right-side{
     width: 100%;
-    text-align: center;
   }
   .f{
     margin-top: 25rem;
@@ -185,6 +290,6 @@ body:has(.card[data-color="green"]:hover) {
     transform: scale(1.2);
   }
   
-} 
+}  
 
-/* contact page end */
+/* contact page end*/

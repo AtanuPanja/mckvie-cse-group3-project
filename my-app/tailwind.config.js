@@ -1,38 +1,72 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
         gray: {
-          200: "#D5DAE1"
+          200: "#D5DAE1",
         },
         black: {
           DEFAULT: "#000",
-          500: "#1D2235"
+          500: "#1D2235",
         },
         blue: {
-          500: "#2b77e7"
-        }
+          500: "#2b77e7",
+        },
       },
       fontFamily: {
         worksans: ["Work Sans", "sans-serif"],
-        poppins: ['Poppins', "sans-serif"],
-        'custom-trebuchet-ms': ["Trebuchet MS", 'sans-serif']
+        poppins: ["Poppins", "sans-serif"],
+        "custom-trebuchet-ms": ["Trebuchet MS", "sans-serif"],
       },
       boxShadow: {
-        card: '0px 1px 2px 0px rgba(0, 0, 0, 0.05)'
-      }
+        card: "0px 1px 2px 0px rgba(0, 0, 0, 0.05)",
+      },
     },
   },
   plugins: [],
-}
+};
+// module.exports = {
+//   content: [
+//     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+//     "./components/**/*.{js,ts,jsx,tsx,mdx}",
+//     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+//   ],
+//   theme: {
+//     fontFamily: {
+//       display: ["Open Sans", "sans-serif"],
+//       body: ["Open Sans", "sans-serif"],
+//     },
+//     extend: {
+//       screens: {
+//         mf: "990px",
+//       },
+//       keyframes: {
+//         "slide-in": {
+//           "0%": {
+//             "-webkit-transform": "translateX(120%)",
+//             transform: "translateX(120%)",
+//           },
+//           "100%": {
+//             "-webkit-transform": "translateX(0%)",
+//             transform: "translateX(0%)",
+//           },
+//         },
+//       },
+//       animation: {
+//         "slide-in": "slide-in 0.5s ease-out",
+//       },
+//     },
+//   },
+//   plugins: [],
+// };
