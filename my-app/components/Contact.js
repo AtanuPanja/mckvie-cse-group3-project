@@ -57,7 +57,7 @@ function ContactComponent() {
   };
 
   return (
-    <div className="flex items-center justify-between min-h-screen total xl:px-20 ">
+    <div className="flex items-center justify-between min-h-screen total ">
       <div className="p-1 left-side mt-4 rounded-lg">
         <h1 className="head-text text-gray-300 text_gradient">Contact info</h1>
         <p className="text-gray-300 mt-3 p-2 pr-5">

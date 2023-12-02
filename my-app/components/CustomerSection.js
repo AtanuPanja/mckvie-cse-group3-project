@@ -1,7 +1,7 @@
 import Image from "next/image";
 export default function CustomerSection() {
   return (
-    <section className=" py-10 body-font">
+    <section className="text-white py-10 body-font">
       <div className="container mx-auto">
         <h2 className="title-font text-2xl my-2 font-medium text-center sm:text-3xl">
           Our Customers
