@@ -61,9 +61,9 @@ function ContactComponent() {
       <div className="p-1 left-side mt-4 rounded-lg">
         <h1 className="head-text text-gray-300 text_gradient">Contact info</h1>
         <p className="text-gray-300 mt-3 p-2 pr-5">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis
-          libero perspiciatis aperiam iure harum obcaecati cumque eos earum
-          repellat inventore.
+          Empowering Seamless Transactions: Transforming Supply Chains with
+          Blockchain Innovation.Reach out to us for efficient, transparent, and
+          secure supply chain solutions that redefine industry standards.
         </p>
         <div className="m-5 flex justify-center flex-col gap-10">
           <div className="flex items-center justify-start text-slate-200 gap-3">
@@ -110,7 +110,7 @@ function ContactComponent() {
                 <path d="M12 2C7.589 2 4 5.589 4 9.995 3.971 16.44 11.696 21.784 12 22c0 0 8.029-5.56 8-12 0-4.411-3.589-8-8-8zm0 12c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"></path>
               </svg>
             </a>
-            <p>Liluah-Howrah,West Bengal</p>
+            <p>Triumph Terrace, Inspira City</p>
           </div>
         </div>
         {/* social Links */}
@@ -204,6 +204,7 @@ function ContactComponent() {
                     name="name"
                     className="input"
                     placeholder="Enter Name"
+                    style={{ color: "white" }}
                     required
                     value={form.name}
                     onChange={handleChange}
@@ -216,6 +217,7 @@ function ContactComponent() {
                     name="email"
                     className="input"
                     placeholder="mckvcse2024@gmail.com"
+                    style={{ color: "white" }}
                     required
                     value={form.email}
                     onChange={handleChange}
@@ -229,6 +231,7 @@ function ContactComponent() {
                     name="number"
                     className="input"
                     placeholder="1234567890"
+                    style={{ color: "white" }}
                     required
                     value={form.number}
                     onChange={handleChange}
@@ -242,6 +245,7 @@ function ContactComponent() {
                     rows="4"
                     className="textarea"
                     placeholder="Write your thoughts here..."
+                    style={{ color: "white" }}
                     value={form.message}
                     onChange={handleChange}
                   />
