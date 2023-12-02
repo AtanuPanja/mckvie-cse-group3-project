@@ -33,10 +33,8 @@ export default function Home() {
       {/* <Hero heading="Heading"/> */}
       {/* <HeroSlider slides={homeSliderData} /> */}
       <CustomerSection />
-      {/* <hr />
       <DetailsSection />
-      <hr />
-      <TestimonialsSection /> */}
+      <TestimonialsSection />
     </main>
   );
 }

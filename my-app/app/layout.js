@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import BackToTop from "@/components/BackToTop";
 import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -12,20 +13,18 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  
+
   return (
     <html lang="en" className="scroll-smooth">
       <body>
         <div className="min-h-screen">
-          <div className="gradient-bg-welcome">
+          <div className="gradient-bg-welcome text-slate-100">
             <Navbar />
-            {/* back to top link */}
-            <a
-              href="#"
-              className="inline-block rounded-full px-5 py-3  fixed bottom-8 right-5 bg-indigo-800 text-white z-50 focus:outline focus:outline-gray-100"
-            >
-              &uarr;
-            </a>
-            {children}
+            <BackToTop />
+            <div className="lg:px-20">
+              {children}
+            </div>
             {/* <Footer /> */}
           </div>
         </div>
