@@ -197,7 +197,7 @@ body:has(.card[data-color="green"]:hover) {
 
 /* for contact page */
 .total{
-  
+  padding-top: 30px;
   width: 100%;
 }
 .left-side{
