@@ -77,7 +77,7 @@ const About = () => {
 
   return (
     <div className="app-container">
-      <h1 className="heading">This is What We've Brought to Life!</h1>
+      <h1 className="heading text_gradient">This is What We've Brought to Life!</h1>
       <ul className="menu">
         {menuItems.map((menu) => (
           <li
@@ -93,7 +93,7 @@ const About = () => {
         {/*<div className="left-panel">*/}
         <div className="content">
           {selectedMenu === "Overview" && (
-            <section className="text-gray-600 body-font">
+            <section className="text-slate-100  body-font">
               <div className="container px-5 py-24 mx-auto flex flex-wrap">
                 <div className="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden relative">
                   <button
@@ -135,10 +135,10 @@ const About = () => {
                       </svg>
                     </div>
                     <div className="flex-grow">
-                      <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
+                      <h2 className="text-slate-100 text-lg title-font font-medium mb-3">
                         Efficient Inventory Management
                       </h2>
-                      <p className="leading-relaxed text-base">
+                      <p className="leading-relaxed text-gray-300">
                         Streamline inventory levels and reduce carrying costs by
                         implementing real-time tracking and automation, ensuring
                         optimal stock levels at each stage of the supply chain.
@@ -180,10 +180,10 @@ const About = () => {
                       </svg>
                     </div>
                     <div className="flex-grow">
-                      <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
+                      <h2 className="text-slate-100 text-lg title-font font-medium mb-3">
                         Enhanced Visibility and Transparency
                       </h2>
-                      <p className="leading-relaxed text-base">
+                      <p className="leading-relaxed text-gray-300">
                         Improve end-to-end visibility across the supply chain,
                         providing stakeholders with real-time insights into the
                         movement of goods, inventory levels, and production
@@ -230,10 +230,10 @@ const About = () => {
                       </svg>
                     </div>
                     <div className="flex-grow">
-                      <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
+                      <h2 className="text-slate-100 text-lg title-font font-medium mb-3">
                         Optimized Logistics & Distribution
                       </h2>
-                      <p className="leading-relaxed text-base">
+                      <p className="leading-relaxed text-gray-300">
                         Optimize transportation routes, minimize lead times, and
                         enhance overall distribution efficiency by leveraging
                         advanced analytics, route planning, and technology
@@ -265,7 +265,7 @@ const About = () => {
             </section>
           )}
           {selectedMenu === "Technology in use" && (
-            <section className="text-gray-600 body-font">
+            <section className="text-slate-100  body-font">
               <div className="container px-5 py-24 mx-auto flex flex-wrap">
                 <div className="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden relative">
                   <button
@@ -351,10 +351,10 @@ const About = () => {
                       </svg>
                     </div>
                     <div className="flex-grow">
-                      <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
+                      <h2 className="text-slate-100 text-lg title-font font-medium mb-3">
                         Block Chain
                       </h2>
-                      <p className="leading-relaxed text-base">
+                      <p className="leading-relaxed text-gray-300">
                         Leveraging the decentralized and secure nature of
                         blockchain to ensure transparent and tamper-resistant
                         transactions across the supply chain.
@@ -398,10 +398,10 @@ const About = () => {
                       </svg>
                     </div>
                     <div className="flex-grow">
-                      <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
+                      <h2 className="text-slate-100 text-lg title-font font-medium mb-3">
                         Smart Contracts
                       </h2>
-                      <p className="leading-relaxed text-base">
+                      <p className="leading-relaxed text-gray-300">
                         Implementation of self-executing smart contracts on the
                         Ethereum blockchain, automating and enforcing
                         contractual agreements to streamline processes.
@@ -442,10 +442,10 @@ const About = () => {
                       </svg>
                     </div>
                     <div className="flex-grow">
-                      <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
+                      <h2 className="text-slate-100 text-lg title-font font-medium mb-3">
                         Decentralized Applications(DApps)
                       </h2>
-                      <p className="leading-relaxed text-base">
+                      <p className="leading-relaxed text-gray-300">
                         Utilizing decentralized applications built on Ethereum
                         to provide an intuitive and user-friendly interface,
                         enhancing accessibility and user engagement in the
@@ -476,7 +476,7 @@ const About = () => {
             </section>
           )}
           {selectedMenu === "Future Goals" && (
-            <section className="text-gray-600 body-font">
+            <section className="text-slate-100  body-font">
               <div className="container px-5 py-24 mx-auto flex flex-wrap">
                 <div className="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden relative">
                   <button
@@ -515,10 +515,10 @@ const About = () => {
                       </svg>
                     </div>
                     <div className="flex-grow">
-                      <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
+                      <h2 className="text-slate-100 text-lg title-font font-medium mb-3">
                         Ensure Efficiency
                       </h2>
-                      <p className="leading-relaxed text-base">
+                      <p className="leading-relaxed text-gray-300">
                         Efficiency is a fundamental aspect of supply chain
                         management and refers to fulfilling orders timely by
                         using the least amount of inventory.
@@ -564,10 +564,10 @@ const About = () => {
                       </svg>
                     </div>
                     <div className="flex-grow">
-                      <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
+                      <h2 className="text-slate-100 text-lg title-font font-medium mb-3">
                         Optimize and standardize logistics
                       </h2>
-                      <p className="leading-relaxed text-base">
+                      <p className="leading-relaxed text-gray-300">
                         Another key goal of supply chain management is
                         optimizing logistics. There are various ways to optimize
                         your logistics, and deploying modern technology is the
@@ -613,10 +613,10 @@ const About = () => {
                       </svg>
                     </div>
                     <div className="flex-grow">
-                      <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
+                      <h2 className="text-slate-100 text-lg title-font font-medium mb-3">
                         Focus on improving quality
                       </h2>
-                      <p className="leading-relaxed text-base">
+                      <p className="leading-relaxed text-gray-300">
                         The main goal of supply chain management is to
                         manufacture products and deliver them to the end
                         consumers. However, providing the product is not the
@@ -648,14 +648,14 @@ const About = () => {
             </section>
           )}
           {selectedMenu === "FAQs" && (
-            <section className="text-gray-600 body-font overflow-hidden">
+            <section className="text-slate-100  body-font overflow-hidden">
               <div className="container px-5 py-24 mx-auto">
                 <div className="flex flex-wrap -m-12">
                   <div className="p-12 md:w-1/2 flex flex-col items-start">
                     <span className="inline-block py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest">
                       #FAQ1
                     </span>
-                    <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">
+                    <h2 className="sm:text-3xl text-2xl title-font font-medium text-slate-100 mt-4 mb-4">
                       How does blockchain technology enhance supply chain
                       transparency?
                     </h2>
@@ -723,7 +723,7 @@ const About = () => {
                         className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
                       />
                       <span className="flex-grow flex flex-col pl-4">
-                        <span className="title-font font-medium text-gray-900">
+                        <span className="title-font font-medium text-slate-100">
                           By Sourav Chandra
                         </span>
                         <span className="text-gray-400 text-xs tracking-widest mt-0.5">
@@ -736,7 +736,7 @@ const About = () => {
                     <span className="inline-block py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest">
                       #FAQ2
                     </span>
-                    <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">
+                    <h2 className="sm:text-3xl text-2xl title-font font-medium text-slate-100 mt-4 mb-4">
                       What role do smart contracts play in supply chain
                       processes?
                     </h2>
@@ -804,7 +804,7 @@ const About = () => {
                         className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
                       />
                       <span className="flex-grow flex flex-col pl-4">
-                        <span className="title-font font-medium text-gray-900">
+                        <span className="title-font font-medium text-slate-100">
                           By Ishika Ghosh
                         </span>
                         <span className="text-gray-400 text-xs tracking-widest mt-0.5">
@@ -821,7 +821,7 @@ const About = () => {
                     <span className="inline-block py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest">
                       #FAQ3
                     </span>
-                    <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">
+                    <h2 className="sm:text-3xl text-2xl title-font font-medium text-slate-100 mt-4 mb-4">
                       How does blockchain mitigate the risk of counterfeit
                       products in the supply chain?
                     </h2>
@@ -889,7 +889,7 @@ const About = () => {
                         className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
                       />
                       <span className="flex-grow flex flex-col pl-4">
-                        <span className="title-font font-medium text-gray-900">
+                        <span className="title-font font-medium text-slate-100">
                           By Atreyee Kar
                         </span>
                         <span className="text-gray-400 text-xs tracking-widest mt-0.5">
@@ -902,7 +902,7 @@ const About = () => {
                     <span className="inline-block py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest">
                       #FAQ4
                     </span>
-                    <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">
+                    <h2 className="sm:text-3xl text-2xl title-font font-medium text-slate-100 mt-4 mb-4">
                       What benefits does decentralized finance (DeFi) bring to
                       supply chain finance processes?
                     </h2>
@@ -970,7 +970,7 @@ const About = () => {
                         className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
                       />
                       <span className="flex-grow flex flex-col pl-4">
-                        <span className="title-font font-medium text-gray-900">
+                        <span className="title-font font-medium text-slate-100">
                           By Atanu Panja
                         </span>
                         <span className="text-gray-400 text-xs tracking-widest mt-0.5">
@@ -981,10 +981,10 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              <section class="text-gray-600 body-font">
+              <section class="text-slate-100  body-font">
                 <div class="container px-5 pb-24 mx-auto">
                   <div class="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
-                    <h1 class="flex-grow sm:pr-16 text-2xl font-medium title-font text-gray-900">
+                    <h1 class="flex-grow sm:pr-16 text-2xl font-medium title-font text-slate-100">
                       Curious Minds Welcome: Have a Question Beyond the FAQs?
                     </h1>
                     <Link href="/contact" className="mr-5 ">
@@ -1052,8 +1052,8 @@ const About = () => {
           </div>
                 </div>*/}
       </div>
-      <section className="text-gray-600 body-font">
-        <h1 className="heading">Transforming Supply Chains in Four Steps</h1>
+      <section className="text-slate-100  body-font">
+        <h1 className="heading text_gradient">Transforming Supply Chains in Four Steps</h1>
         <div className="container px-5 pb-24 mx-auto flex flex-wrap">
           <div className="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto">
             <div className="h-full w-6 absolute inset-0 flex items-center justify-center">
@@ -1085,10 +1085,10 @@ const About = () => {
                 </svg>
               </div>
               <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
-                <h2 className="font-medium title-font text-gray-900 mb-1 text-xl">
+                <h2 className="font-medium title-font text-slate-100 mb-1 text-xl">
                   Conception and Planning:
                 </h2>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-gray-300">
                   Conduct in-depth research on blockchain technology and its
                   potential applications in supply chain management.
                 </p>
@@ -1164,10 +1164,10 @@ const About = () => {
                 </svg>
               </div>
               <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
-                <h2 className="font-medium title-font text-gray-900 mb-1 text-xl">
+                <h2 className="font-medium title-font text-slate-100 mb-1 text-xl">
                   Blockchain Development
                 </h2>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-gray-300">
                   Technology Selection: Choose the appropriate blockchain
                   platform and technology stack for the supply chain project.
                   Smart Contract Development: Design and deploy smart contracts
@@ -1202,10 +1202,10 @@ const About = () => {
                 </svg>
               </div>
               <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
-                <h2 className="font-medium title-font text-gray-900 mb-1 text-xl">
+                <h2 className="font-medium title-font text-slate-100 mb-1 text-xl">
                   Testing and Optimization
                 </h2>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-gray-300">
                   Conduct rigorous testing to ensure the reliability, security,
                   and efficiency of the blockchain-based system
                 </p>
@@ -1237,10 +1237,10 @@ const About = () => {
                 </svg>
               </div>
               <div className="flex-grow sm:pl-6 mt-6 sm:mt-0">
-                <h2 className="font-medium title-font text-gray-900 mb-1 text-xl">
+                <h2 className="font-medium title-font text-slate-100 mb-1 text-xl">
                   Deployment and Maintenance
                 </h2>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed text-gray-300">
                   Establish protocols for continuous monitoring, updates, and
                   improvements to enhance the system's performance over time.
                 </p>
@@ -1249,7 +1249,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      <h1 className="heading">Uncover the Secrets Behind Our Vision</h1>
+      <h1 className="heading text_gradient">Uncover the Secrets Behind Our Vision</h1>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 myGrid">
         <ImageSection 
           imageSrc="https://lecourrier-du-soir.com/wp-content/uploads/2017/07/Success-Story.jpg"
@@ -1295,16 +1295,16 @@ const About = () => {
             Know More
           </button>
           </div>
-      <section className="text-gray-600 body-font">
+      <section className="text-slate-100  body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">
-            <h1 className="heading">A-Team Behind the Scenes</h1>
-            <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+            <h1 className="heading text_gradient">A-Team Behind the Scenes</h1>
+            <p className="lg:w-2/3 mx-auto leading-relaxed text-gray-300">
               "Turning Ideas into Reality: Your A-Team Making IT Happen!"
             </p>
           </div>
-          <div className="flex flex-wrap -m-4">
-            <div className="p-4 lg:w-1/4 md:w-1/2">
+          <div className="flex flex-wrap">
+            <div className="p-8 lg:w-1/3 md:w-1/2">
               <div className="h-full flex flex-col items-center text-center">
                 <img
                   alt="team"
@@ -1312,7 +1312,7 @@ const About = () => {
                   src="https://media.licdn.com/dms/image/D4D03AQHpUjPqXRX2zg/profile-displayphoto-shrink_800_800/0/1690040456311?e=1705536000&v=beta&t=gNf3SejrKMN_mJ9ZFA10UAtkTXdfnxiDRRpmu9QfwDI"
                 />
                 <div className="w-full">
-                  <h2 className="title-font font-medium text-lg text-gray-900">
+                  <h2 className="title-font font-medium text-lg text-slate-100">
                     Hi, I'm Arindam
                   </h2>
                   <h3 className="text-gray-500 mb-3">UI Developer</h3>
@@ -1370,7 +1370,7 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="p-4 lg:w-1/4 md:w-1/2">
+            <div className="p-8 lg:w-1/3 md:w-1/2">
               <div className="h-full flex flex-col items-center text-center">
                 <img
                   alt="team"
@@ -1378,7 +1378,7 @@ const About = () => {
                   src="https://media.licdn.com/dms/image/C4E03AQFK_ANyeceFLQ/profile-displayphoto-shrink_800_800/0/1613665356174?e=1705536000&v=beta&t=7cSD7PZQM-7N90Jlv1m25ufKLN2nGrk5KQpiGTeNNAg"
                 />
                 <div className="w-full">
-                  <h2 className="title-font font-medium text-lg text-gray-900">
+                  <h2 className="title-font font-medium text-lg text-slate-100">
                     Hii, I'm Atanu
                   </h2>
                   <h3 className="text-gray-500 mb-3">UI Developer</h3>
@@ -1436,7 +1436,7 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="p-4 lg:w-1/4 md:w-1/2">
+            <div className="p-8 lg:w-1/3 md:w-1/2">
               <div className="h-full flex flex-col items-center text-center">
                 <img
                   alt="team"
@@ -1444,7 +1444,7 @@ const About = () => {
                   src="https://media.licdn.com/dms/image/C4D03AQGHVrAe88VgqQ/profile-displayphoto-shrink_800_800/0/1655873529140?e=1705536000&v=beta&t=OsC39fjDPc9CCoMcQNU31T5A0qBoqWDIjz7nwMB1tug"
                 />
                 <div className="w-full">
-                  <h2 className="title-font font-medium text-lg text-gray-900">
+                  <h2 className="title-font font-medium text-lg text-slate-100">
                     Hi, I'm Atreyee
                   </h2>
                   <h3 className="text-gray-500 mb-3">UI Developer</h3>
@@ -1502,7 +1502,7 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="p-4 lg:w-1/4 md:w-1/2">
+            <div className="p-8 lg:w-1/3 md:w-1/2">
               <div className="h-full flex flex-col items-center text-center">
                 <img
                   alt="team"
@@ -1510,7 +1510,7 @@ const About = () => {
                   src="https://media.licdn.com/dms/image/D5603AQHA2vDzUyjK4Q/profile-displayphoto-shrink_800_800/0/1686147964747?e=2147483647&v=beta&t=r_JBP6HFgMiGKhwTja_BV3SC7SGB3FT3CJdP20GtaDQ"
                 />
                 <div className="w-full">
-                  <h2 className="title-font font-medium text-lg text-gray-900">
+                  <h2 className="title-font font-medium text-lg text-slate-100">
                     Hi, I'm Sourav
                   </h2>
                   <h3 className="text-gray-500 mb-3">UI Developer</h3>
@@ -1568,7 +1568,7 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="p-4 lg:w-1/4 md:w-1/2">
+            <div className="p-8 lg:w-1/3 md:w-1/2">
               <div className="h-full flex flex-col items-center text-center">
                 <img
                   alt="team"
@@ -1576,7 +1576,7 @@ const About = () => {
                   src="data:image/jpeg;base64,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"
                 />
                 <div className="w-full">
-                  <h2 className="title-font font-medium text-lg text-gray-900">
+                  <h2 className="title-font font-medium text-lg text-slate-100">
                     Hi, I'm Ishika
                   </h2>
                   <h3 className="text-gray-500 mb-3">UI Developer</h3>

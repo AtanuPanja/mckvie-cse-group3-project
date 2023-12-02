@@ -1,5 +1,9 @@
 /* About.css */
 
+.app-container {
+  padding-top: 100px;
+}
+
 .about-container {
   display: flex;
   flex-direction: column;
@@ -36,19 +40,29 @@
 }
 
 .menu li {
+  padding: 3px 9px;
   margin-right: 20px;
   cursor: pointer;
-  color: black;
+  color: white;
   transition: color 0.3s, border-bottom 0.3s;
   font-weight: bold;
   font-size: large;
   border-bottom: 2px solid rgb(216, 213, 221);
 }
 
-.menu li:hover {
-  color: indigo;
-  border-bottom: rgb(34, 33, 33);
+.menu li.active {
+  /* color: #4f46e5; */
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  box-shadow: 0px -5px 6px #4f46e5;
+  border-bottom: none;
 }
+
+.menu li:hover {
+  /* color: #3e36e3; */
+  border-bottom: none;
+}
+
 
 /*
 .menu li {
