@@ -1,6 +1,9 @@
 export default function Footer() {
   return (
-    <footer className="bg-indigo-600 text-white body-font">
+    <footer
+      style={{ backgroundColor: "rgb(23, 28, 42)" }}
+      className="bg-rgb(23, 28, 42) text-white body-font"
+    >
       <div className="container px-5 pt-10 mx-auto flex flex-wrap flex-col justify-center items-center lg:items-start md:items-center md:flex-row md:flex-nowrap md:gap-0.5">
         <div className="w-64 flex-shrink-0 mx-auto text-center md:mx-0 md:text-left">
           <h3 className="text-center">SOCIAL LINKS</h3>
@@ -112,12 +115,18 @@ export default function Footer() {
             </h2>
             <ul className="list-none">
               <li>
-                <a href="/services" className="text-white outline-none hover:underline focus:underline">
+                <a
+                  href="/services"
+                  className="text-white outline-none hover:underline focus:underline"
+                >
                   Counterfeit Detection
                 </a>
               </li>
               <li>
-                <a href="/services" className="text-white outline-none hover:underline focus:underline">
+                <a
+                  href="/services"
+                  className="text-white outline-none hover:underline focus:underline"
+                >
                   Warranty Service
                 </a>
               </li>
@@ -127,10 +136,10 @@ export default function Footer() {
         <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
           <h3 className="font-bold text-center">ADDRESS</h3>
           <address className="flex flex-col py-3 items-center">
-            <p>Address Line 1</p>
-            <p>Address Line 2</p>
-            <p>City, State</p>
-            <p>Pincode</p>
+            <p>Triumph Terrace, Suite 202</p>
+            <p>Elevate Avenue</p>
+            <p>Inspira City, Motivationland</p>
+            <p> PIN 12345</p>
           </address>
         </div>
       </div>
