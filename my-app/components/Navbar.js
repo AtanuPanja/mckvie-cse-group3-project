@@ -105,11 +105,16 @@ const Navbar = () => {
               </svg>
             </li>
             {["Home", "About", "Services", "Contact"].map((item, index) => (
-              <NavBarItem
-                key={item + index}
-                title={item}
-                classprops="my-2 text-lg w-2/4"
-              />
+              // <NavBarItem
+              //   key={item + index}
+              //   title={item}
+              //   classprops="my-2 text-lg w-2/4"
+              // />
+              <li className={`mx-4 cursor-pointer my-2 text-lg w-2/4`}>
+                <Link href={index === 0 ? `/` : `/${item.toLowerCase()}`}>
+                  {item}
+                </Link>
+              </li>
             ))}
           </ul>
         )}
