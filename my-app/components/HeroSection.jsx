@@ -30,7 +30,7 @@ const HeroSection = () => {
         className={`flex-1 flex justify-center items-center md:my-0 my-5 relative`}
       >
         <img
-          src={"./images/robot.png"}
+          src={"./images/final_pro.png"}
           alt=""
           className="w-auto h-[80%] relative z-[5]"
         />
