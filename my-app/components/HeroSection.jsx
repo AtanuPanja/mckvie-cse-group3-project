@@ -2,10 +2,10 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className={`flex md:flex-row flex-col gap-2 sm:py-0 sm:px-2 xl:px-20 px-2 py-2`}
+      className={`flex md:flex-row flex-col gap-2 sm:py-0 sm:px-2 xl:px-10 px-2 py-2 mt-2`}
     >
       <div
-        className={`flex-1 flex justify-center items-start flex-col xl:px-10 sm:px-16 px-0 overflow-hidden pt-24`}
+        className={`flex-2 flex justify-center items-start flex-col xl:px-5 sm:px-16 px-0 overflow-hidden pt-24`}
       >
         <div className="flex flex-row justify-between items-center w-full">
           <h1 className="flex-1 font-poppins font-semibold sm:text-[30px] xl:text-[52px] text-white sm:leading-[100.8px] leading-[75px]">
@@ -27,7 +27,7 @@ const HeroSection = () => {
       </div>
 
       <div
-        className={`flex-1 flex justify-center items-center md:my-0 my-5 relative`}
+        className={`flex-1 flex justify-center items-center md:my-1 my-5 relative`}
       >
         <img
           src={"./images/final_pro.png"}
