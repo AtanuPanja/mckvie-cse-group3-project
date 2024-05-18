@@ -1,9 +1,9 @@
 import "../styles/globals.css";
 
 //INTERNAL IMPORT
-import { Footer, Banner, NavBar} from "../Components";
+import { Footer, Banner } from "../Components";
 import { TrackingProvider } from "../Conetxt/TrackingContext";
-
+import NavBar from "./../Components/NavBar";
 
 export default function app({ Component, pageProps }) {
   return (
@@ -12,7 +12,7 @@ export default function app({ Component, pageProps }) {
         <NavBar />
         <Component {...pageProps} />
       </TrackingProvider>
-        <Footer />
+      <Footer />
     </>
   );
 }
