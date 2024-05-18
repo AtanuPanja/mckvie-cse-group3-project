@@ -1,126 +1,86 @@
-"use client";
-import { useState, useEffect } from "react";
-import Image from "next/image";
-import Link from "next/link";
+import { useEffect, useState, useContext } from "react";
 
-const NavBarItem = ({ title, classprops }) => (
-  <li className={`mx-4 cursor-pointer ${classprops}`}>{title}</li>
-);
+import { TrackingContext } from "../Conetxt/TrackingContext";
+import { Nav1, Nav2, Nav3 } from "../Components/index";
+export default () => {
+  const [state, setState] = useState(false);
+  const { currentUser, connectWallet } = useContext(TrackingContext);
 
-const Navbar = () => {
-  const [toggleMenu, setToggleMenu] = useState(false);
-  const [offset, setOffset] = useState(0);
-  let sticky =
-    "w-full flex md:justify-center justify-between items-center p-4 fixed z-20";
+  const navigation = [
+    { title: "Home", path: "Home" },
+    { title: "About", path: "About" },
+    { title: "Services", path: "/" },
+    { title: "Contact Us", path: "contact" },
+    { title: "Erc20", path: "#" },
+  ];
+
   useEffect(() => {
-    const handleScroll = (event) => {
-      setOffset(window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
+    document.onclick = (e) => {
+      const target = e.target;
+      if (!target.closest(".menu-btn")) setState(false);
     };
   }, []);
 
   return (
-    <nav className={offset < 20 ? `${sticky}` : `${sticky} gradient-bg-nav`}>
-      <div className="md:flex-[0.5] flex-initial justify-center items-center">
-        <Image
-          src="./images/logo.svg"
-          alt="logo"
-          width={3}
-          className="w-10 cursor-pointer"
-          height={0.8}
-        />
-      </div>
-      <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
-        {["Home", "About", "Services", "Contact"].map((item, index) => (
-          <Link
-            href={index === 0 ? `/` : `/${item.toLowerCase()}`}
-            key={item + index}
-          >
-            <NavBarItem title={item} />
-          </Link>
-        ))}
-        <li className="flex items-center bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
-          Get Started
-          <svg
-            fill="none"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            className="w-4 h-4 ml-1"
-            viewBox="0 0 24 24"
-          >
-            <path d="M5 12h14M12 5l7 7-7 7"></path>
-          </svg>
-        </li>
-      </ul>
-      <div className="flex relative">
-        {!toggleMenu && (
-          <svg
-            onClick={() => setToggleMenu(true)}
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            style={{ fill: "rgba(225,225,225, 1)", transform: "msFilter" }}
-            className="text-white md:hidden cursor-pointer"
-          >
-            <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
-          </svg>
-        )}
-        {toggleMenu && (
-          <svg
-            onClick={() => setToggleMenu(false)}
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            style={{ fill: "rgba(225,225,225, 1)", transform: "msFilter" }}
-            className="text-white md:hidden cursor-pointer"
-          >
-            <path d="M19.95 5.64 13.59 12l6.36 6.36 1.41-1.41L16.41 12l4.95-4.95-1.41-1.41zM2.64 7.05 7.59 12l-4.95 4.95 1.41 1.41L10.41 12 4.05 5.64 2.64 7.05z"></path>
-          </svg>
-        )}
-        {toggleMenu && (
-          <ul
-            className="z-10 fixed -top-0 -right-2 p-3 w-[70vw] h-screen shadow-2xl md:hidden list-none
-            flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in"
-          >
-            <li className="text-xl w-full my-2">
-              <svg
-                onClick={() => setToggleMenu(false)}
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                style={{ fill: "rgba(225,225,225, 1)", transform: "msFilter" }}
-                className="text-white md:hidden cursor-pointer"
-              >
-                <path d="M19.95 5.64 13.59 12l6.36 6.36 1.41-1.41L16.41 12l4.95-4.95-1.41-1.41zM2.64 7.05 7.59 12l-4.95 4.95 1.41 1.41L10.41 12 4.05 5.64 2.64 7.05z"></path>
-              </svg>
-            </li>
-            {["Home", "About", "Services", "Contact"].map((item, index) => (
-              // <NavBarItem
-              //   key={item + index}
-              //   title={item}
-              //   classprops="my-2 text-lg w-2/4"
-              // />
-              <li className={`mx-4 cursor-pointer my-2 text-lg w-2/4`}>
-                <Link href={index === 0 ? `/` : `/${item.toLowerCase()}`}>
-                  {item}
-                </Link>
-              </li>
-            ))}
+    <nav
+      className={`bg-white pb-5 md:text-sm ${
+        state
+          ? "shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0"
+          : ""
+      }`}
+    >
+      <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
+        <div className="flex items-center justify-between py-5 md:block">
+          <a href="javascript:void(0)">
+            <img
+              src="https://www.floatui.com/logo.svg"
+              width={120}
+              height={50}
+              alt="Float UI logo"
+            />
+          </a>
+          <div className="md:hidden">
+            <button
+              className="menu-btn text-gray-500 hover:text-gray-800"
+              onClick={() => setState(!state)}
+            >
+              {state ? <Nav1 /> : <Nav2 />}
+            </button>
+          </div>
+        </div>
+        <div
+          className={`flex-1 items-center mt-8 md:mt-0 md:flex ${
+            state ? "block" : "hidden"
+          } `}
+        >
+          <ul className="justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
+            {navigation.map((item, idx) => {
+              return (
+                <li key={idx} className="text-gray-700 hover:text-gray-900">
+                  <a href={item.path} className="block">
+                    {item.title}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
-        )}
+          <div className="flex-1 gap-x-6 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
+            {currentUser ? (
+              <p className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex">
+                {currentUser.slice(0, 25)}..
+              </p>
+            ) : (
+              <button
+                onClick={() => connectWallet()}
+                className="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex"
+              >
+                Connect Wallet
+                <Nav3 />
+              </button>
+            )}
+          </div>
+        </div>
       </div>
     </nav>
   );
 };
-
-export default Navbar;
