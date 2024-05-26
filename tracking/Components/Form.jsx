@@ -14,8 +14,10 @@ export default ({
 
   const createItem = async () => {
     try {
+      console.log("In create");
       await createShipment(shipment);
     } catch (error) {
+      console.error(error);
       console.log("Wrong creating item");
     }
   };

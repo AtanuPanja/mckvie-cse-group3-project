@@ -10,7 +10,7 @@ export default ({ setCreateShipmentModel, allShipmentsdata }) => {
     return dataTime;
   };
 
-  console.log(allShipmentsdata);
+  console.log("all", allShipmentsdata);
 
   return (
     <div className="max-w-screen-xl mx-auto px-4 md:px-8">
@@ -27,7 +27,6 @@ export default ({ setCreateShipmentModel, allShipmentsdata }) => {
         <div className="mt-3 md:mt-0">
           <p
             onClick={() => setCreateShipmentModel(true)}
-            href="javascript:void(0)"
             className="inline-block px-4 py-2 text-white duration-150 font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 md:text-sm rounded-lg md:inline-flex"
           >
             Add Tracking
@@ -49,38 +48,40 @@ export default ({ setCreateShipmentModel, allShipmentsdata }) => {
             </tr>
           </thead>
           <tbody className="text-gray-600 divide-y">
-            {allShipmentsdata?.map((shipment, idx) => (
-              <tr key={idx}>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  {shipment.sender.slice(0, 15)}...
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  {shipment.receiver.slice(0, 15)}...
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  {converTime(shipment.pickupTime)}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  {shipment.distance} Km
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  {shipment.price}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  {shipment.deliveryTime}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  {shipment.isPaid ? " Completed" : "Not Complete"}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  {shipment.status == 0
-                    ? "Pending"
-                    : shipment.status == 1
-                    ? "IN_TRANSIT"
-                    : "Delivered"}
-                </td>
-              </tr>
-            ))}
+            {allShipmentsdata === undefined
+              ? ""
+              : allShipmentsdata?.map((shipment, idx) => (
+                  <tr key={idx}>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      {shipment.sender.slice(0, 15)}...
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      {shipment.receiver.slice(0, 15)}...
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      {converTime(shipment.pickupTime)}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      {shipment.distance} Km
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      {shipment.price}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      {shipment.deliveryTime}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      {shipment.isPaid ? " Completed" : "Not Complete"}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      {shipment.status == 0
+                        ? "Pending"
+                        : shipment.status == 1
+                        ? "IN_TRANSIT"
+                        : "Delivered"}
+                    </td>
+                  </tr>
+                ))}
           </tbody>
         </table>
       </div>
