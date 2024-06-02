@@ -8,7 +8,7 @@ export default () => {
 
   return (
     <nav
-      className={`md:text-sm fixed top-0 left-0 w-full bg-black-500 px-auto`}
+      className={`md:text-sm fixed top-0 left-0 w-full bg-black-500 px-auto z-50`}
     >
       <div className="flex md:flex-row items-center mx-20">
         <div className="flex items-center py-3 basis-1/2">
