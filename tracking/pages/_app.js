@@ -3,16 +3,15 @@ import "../styles/globals.css";
 //INTERNAL IMPORT
 import { Footer, Banner } from "../Components";
 import { TrackingProvider } from "../Conetxt/TrackingContext";
-import NavBar from "./../Components/NavBar";
+import BackToTop from "./../Components/BackToTop";
 
 export default function app({ Component, pageProps }) {
   return (
     <>
       <TrackingProvider>
-        <NavBar />
         <Component {...pageProps} />
+        <BackToTop />
       </TrackingProvider>
-      <Footer />
     </>
   );
 }

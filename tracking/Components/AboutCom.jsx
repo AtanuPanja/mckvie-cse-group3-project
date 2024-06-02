@@ -77,7 +77,9 @@ const AboutCom = () => {
 
   return (
     <div className="app-container bg-black-bg">
-      <h1 className="heading text_gradient">This is What We've Brought to Life!</h1>
+      <h1 className="heading text_gradient">
+        This is What We've Brought to Life!
+      </h1>
       <ul className="menu">
         {menuItems.map((menu) => (
           <li
@@ -981,14 +983,14 @@ const AboutCom = () => {
                   </div>
                 </div>
               </div>
-              <section class="text-slate-100  body-font">
-                <div class="container px-5 pb-24 mx-auto">
-                  <div class="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
-                    <h1 class="flex-grow sm:pr-16 text-2xl font-medium title-font text-slate-100">
+              <section classNmae="text-slate-100  body-font">
+                <div classNmae="container px-5 pb-24 mx-auto">
+                  <div classNmae="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
+                    <h1 classNmae="flex-grow sm:pr-16 text-2xl font-medium title-font text-slate-100">
                       Curious Minds Welcome: Have a Question Beyond the FAQs?
                     </h1>
                     <Link href="/contact" className="mr-5 ">
-                      <button class="flex-shrink-0 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0">
+                      <button classNmae="flex-shrink-0 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0">
                         Ask Doubts
                       </button>
                     </Link>
@@ -1053,7 +1055,9 @@ const AboutCom = () => {
                 </div>*/}
       </div>
       <section className="text-slate-100  body-font">
-        <h1 className="heading text_gradient">Transforming Supply Chains in Four Steps</h1>
+        <h1 className="heading text_gradient">
+          Transforming Supply Chains in Four Steps
+        </h1>
         <div className="container px-5 pb-24 mx-auto flex flex-wrap">
           <div className="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto">
             <div className="h-full w-6 absolute inset-0 flex items-center justify-center">
@@ -1249,7 +1253,9 @@ const AboutCom = () => {
           </div>
         </div>
       </section>
-      <h1 className="heading text_gradient">Uncover the Secrets Behind Our Vision</h1>
+      <h1 className="heading text_gradient">
+        Uncover the Secrets Behind Our Vision
+      </h1>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 myGrid">
         <ImageSection
           imageSrc="https://lecourrier-du-soir.com/wp-content/uploads/2017/07/Success-Story.jpg"
@@ -1291,10 +1297,11 @@ const AboutCom = () => {
               />*/}
         {/* Add more ImageSection components for the remaining images */}
       </div>
-      <div className="flex justify-center items-center"><button className="text-white bg-indigo-500 px-3 py-1 rounded third">
-            Know More
-          </button>
-          </div>
+      <div className="flex justify-center items-center">
+        <button className="text-white bg-indigo-500 px-3 py-1 rounded third">
+          Know More
+        </button>
+      </div>
       <section className="text-slate-100  body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">

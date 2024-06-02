@@ -45,7 +45,6 @@ function HeroSlider({ slides }) {
   };
 
   useEffect(() => {
-    console.log("use effect");
     if (timerRef.current) {
       clearTimeout(timerRef.current);
     }

@@ -4,7 +4,7 @@ import { ethers } from "ethers";
 
 //INTERNAL IMPORT
 import tracking from "../Conetxt/Tracking.json";
-const ContractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+const ContractAddress = "0x529EEcB8Aa6c9a7c1Fe4ea5d36Cb3C8D40BF8896";
 const ContractABI = tracking.abi;
 
 //---FETCHING SMART CONTRACT
@@ -19,9 +19,8 @@ export const TrackingProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState("");
 
   const createShipment = async (items) => {
-    console.log(items);
     const { receiver, pickupTime, distance, price } = items;
-
+    console.log("In create");
     try {
       const web3Modal = new Web3Modal();
       const connection = await web3Modal.connect();
@@ -39,7 +38,7 @@ export const TrackingProvider = ({ children }) => {
       );
       await createItem.wait();
       console.log(createItem);
-      location.reload();
+      window.location.reload();
     } catch (error) {
       console.log("Some want wrong", error);
     }
@@ -66,6 +65,7 @@ export const TrackingProvider = ({ children }) => {
 
       return allShipments;
     } catch (error) {
+      console.log(error);
       console.log("error want, getting shipment");
     }
   };
@@ -85,7 +85,8 @@ export const TrackingProvider = ({ children }) => {
       const shipmentsCount = await contract.getShipmentsCount(accounts[0]);
       return shipmentsCount.toNumber();
     } catch (error) {
-      console.log("error want, getting shipment");
+      console.log(error);
+      // console.log("error want, getting shipment");
     }
   };
 
@@ -116,7 +117,7 @@ export const TrackingProvider = ({ children }) => {
 
       await transaction.wait();
       console.log(transaction);
-      location.reload();
+      window.location.reload();
     } catch (error) {
       console.log("wrong completeShipment", error);
     }
@@ -181,7 +182,7 @@ export const TrackingProvider = ({ children }) => {
 
       shipment.wait();
       console.log(shipment);
-      location.reload();
+      window.location.reload();
     } catch (error) {
       console.log("Sorry no chipment", error);
     }

@@ -184,7 +184,7 @@ function ContactComponent() {
               width="100"
               ariaLabel="blocks-loading"
               wrapperStyle={{}}
-              wrapperClass="blocks-wrapper"
+              wrapperclassNmae="blocks-wrapper"
               colors={["#e15b64", "#f47e60", "#f8b26a", "#abbd81", "#849b87"]}
             />
           </div>
