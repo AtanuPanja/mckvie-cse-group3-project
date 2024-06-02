@@ -1,5 +1,6 @@
 import Image from "next/image";
 import CommonNavbar from "../Components/CommonNavbar";
+import { Footer } from "../Components";
 
 function TickMarkIcon() {
   return (
@@ -22,6 +23,7 @@ const index = () => {
     "lg:w-1/3 m-10 p-5 rounded-lg shadow-inner shadow-indigo-600";
   return (
     <>
+      {/* <div className="gradient-bg-welcome"> */}
       <CommonNavbar />
       <section
         id="home"
@@ -281,7 +283,9 @@ const index = () => {
             {/*  */}
           </div>
         </div>
+        <Footer />
       </section>
+      {/* </div> */}
     </>
   );
 };

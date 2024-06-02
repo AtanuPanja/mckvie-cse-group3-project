@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Str1 } from "../Components/index";
+import { Cross } from "./SVG/SvgProvider";
+import { SubmitButton } from "./ui/SubmitButton";
 
 export default ({ startModal, setStartModal, startShipment }) => {
   const [getProduct, setGetProduct] = useState({
@@ -17,17 +19,17 @@ export default ({ startModal, setStartModal, startShipment }) => {
         onClick={() => setStartModal(false)}
       ></div>
       <div className="flex items-center min-h-screen px-4 py-8">
-        <div className="relative w-full max-w-lg p-4 mx-auto bg-white rounded-md shadow-lg">
+        <div className="relative w-full max-w-lg p-4 mx-auto bg-black rounded-md shadow-lg border-[0.5px] border-white">
           <div className="flex justify-end">
             <button
-              className="p-2 text-gray-400 rounded-md hover:bg-gray-100"
+              className="text-gray-200 mr-2"
               onClick={() => setStartModal(false)}
             >
-              <Str1 />
+              <Cross />
             </button>
           </div>
           <div className="max-w-sm mx-auto py-3 space-y-3 text-center">
-            <h4 className="text-lg font-medium text-gray-800">
+            <h4 className="text-lg font-medium text-gray-100">
               Start The Shipping
             </h4>
 
@@ -45,7 +47,7 @@ export default ({ startModal, setStartModal, startShipment }) => {
                   }
                 />
               </div>
-              <div className="relative mt-3">
+              <div className="relative my-3">
                 <input
                   type="text"
                   placeholder="Id"
@@ -59,12 +61,10 @@ export default ({ startModal, setStartModal, startShipment }) => {
                 />
               </div>
 
-              <button
-                onClick={() => startShipping()}
-                className="block w-full mt-3 py-3 px-4 font-medium text-sm text-center text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg ring-offset-2 ring-indigo-600 focus:ring-2"
-              >
-                Get details
-              </button>
+              <SubmitButton
+                title={"Start shipment"}
+                handleClick={() => startShipment()}
+              />
             </form>
           </div>
         </div>
