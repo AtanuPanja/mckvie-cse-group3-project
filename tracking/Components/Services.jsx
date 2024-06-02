@@ -1,12 +1,7 @@
 import MagicCard from "./ui/MagicCard";
 
 export default ({ setCompleteModal, setGetModel, setStartModal }) => {
-  const team = [
-    "Complete Shipment",
-    "Get Shipment",
-    "start Shipment",
-    "Send Shipment",
-  ];
+  const team = ["Complete Shipment", "Get Shipment Details", "Start Shipment"];
 
   const openModelBox = (text) => {
     if (text === 1) {

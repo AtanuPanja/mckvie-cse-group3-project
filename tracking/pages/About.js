@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CommonNavbar from "../Components/CommonNavbar";
-// Import your CSS file
-// import Link from "next/link";
+
+
 const about = () => {
   const [selectedMenu, setSelectedMenu] = useState("Overview");
 
@@ -975,7 +975,10 @@ const about = () => {
                       <a className="inline-flex items-center">
                         <img
                           alt="blog"
-                          src="https://media.licdn.com/dms/image/C4E03AQFK_ANyeceFLQ/profile-displayphoto-shrink_800_800/0/1613665356174?e=1705536000&v=beta&t=7cSD7PZQM-7N90Jlv1m25ufKLN2nGrk5KQpiGTeNNAg"
+                          src={
+                            atanu
+                            // "https://media.licdn.com/dms/image/D5603AQHoY7vAzvnVLg/profile-displayphoto-shrink_200_200/0/1714815293522?e=1723075200&v=beta&t=XKCxyszF_DBZtn-5BlBtjxkBgcvVwlvKO5U10pzs914"
+                          }
                           className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
                         />
                         <span className="flex-grow flex flex-col pl-4">
@@ -1006,60 +1009,7 @@ const about = () => {
                 </section>
               </section>
             )}
-
-            {/*</div>*/}
           </div>
-          {/*
-        <div className="right-panel">
-          <div className="content">
-            {selectedMenu === "Overview" && (
-              <div>
-                <img
-                  src="https://cdn.ttgtmedia.com/rms/onlineImages/erp-supply_chain_management_mobile.png"
-                  alt="Overview"
-                  style={{
-                    width: "100%",
-                    maxWidth: "400px",
-                    borderRadius: "8px",
-                    boxShadow: "0 4px 8px rgba(0, 0, 0, 20)",
-                    transition: "transform 3s ease-in-out",
-                  }}
-                />
-              </div>
-            )}
-            {selectedMenu === "Technology in use" && (
-              <div>
-                <img
-                  src="https://www.yondu.com/wp-content/uploads/2021/04/creative-abstract-background-technology-blockchain-ultraviolet-background-scaled.jpg"
-                  alt="Technology in use"
-                  style={{
-                    width: "100%",
-                    maxWidth: "400px",
-                    borderRadius: "8px",
-                    boxShadow: "0 4px 8px rgba(0, 0, 0, 20)",
-                    transition: "transform 3s ease-in-out",
-                  }}
-                />
-              </div>
-            )}
-            {selectedMenu === "Future Goals" && (
-              <div>
-                <img
-                  src="https://www.selecthub.com/wp-content/uploads/2022/08/SCM-Trends.jpg"
-                  alt="Future Goals"
-                  style={{
-                    width: "100%",
-                    maxWidth: "400px",
-                    borderRadius: "8px",
-                    boxShadow: "0 4px 8px rgba(0, 0, 0, 20)",
-                    transition: "transform 3s ease-in-out",
-                  }}
-                />
-              </div>
-            )}
-            {selectedMenu === "FAQs" && <div></div>}
-          </div>
-                </div>*/}
         </div>
         <section className="text-slate-100  body-font">
           <h1 className="heading text_gradient">
@@ -1309,20 +1259,8 @@ const about = () => {
             title="Training & Support"
             description="Empowering Growth: Where Every Question Finds Its Answer."
           />
+        </div>
 
-          {/*
-        <ImageSection
-          imageSrc="https://www.iimtindia.net/Blog/wp-content/uploads/2022/05/Blockchain.jpg"
-          title="Training & Support"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-              />*/}
-          {/* Add more ImageSection components for the remaining images */}
-        </div>
-        <div className="flex justify-center items-center">
-          <button className="text-white bg-indigo-500 px-3 py-1 rounded third">
-            Know More
-          </button>
-        </div>
         <section className="text-slate-100  body-font">
           <div className="container px-5 py-24 mx-auto">
             <div className="flex flex-col text-center w-full mb-20">
@@ -1339,7 +1277,7 @@ const about = () => {
                   <img
                     alt="team"
                     className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-                    src="https://media.licdn.com/dms/image/D4D03AQHpUjPqXRX2zg/profile-displayphoto-shrink_800_800/0/1690040456311?e=1705536000&v=beta&t=gNf3SejrKMN_mJ9ZFA10UAtkTXdfnxiDRRpmu9QfwDI"
+                    src="https://media.licdn.com/dms/image/D4D03AQHpUjPqXRX2zg/profile-displayphoto-shrink_200_200/0/1690040456311?e=1723075200&v=beta&t=o1WO4eDnmiJ8kA7-7FWhjgzZO9t0MekDC6f5frRJd6M"
                   />
                   <div className="w-full">
                     <h2 className="title-font font-medium text-lg text-slate-100">
@@ -1471,7 +1409,7 @@ const about = () => {
                   <img
                     alt="team"
                     className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-                    src="https://media.licdn.com/dms/image/C4D03AQGHVrAe88VgqQ/profile-displayphoto-shrink_800_800/0/1655873529140?e=1705536000&v=beta&t=OsC39fjDPc9CCoMcQNU31T5A0qBoqWDIjz7nwMB1tug"
+                    src="https://media.licdn.com/dms/image/D5603AQGjf9y0H_c8Lw/profile-displayphoto-shrink_200_200/0/1710939911810?e=1723075200&v=beta&t=CTdwdkX86vloymN1seJc00ZZ3_woJKJ9VJEOSX5luK4"
                   />
                   <div className="w-full">
                     <h2 className="title-font font-medium text-lg text-slate-100">

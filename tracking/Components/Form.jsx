@@ -97,7 +97,7 @@ export default ({
                   }
                 />
               </div>
-              <div className="relative mt-3">
+              <div className="relative my-3">
                 <input
                   type="text"
                   placeholder="price"

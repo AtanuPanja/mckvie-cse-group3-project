@@ -6,7 +6,6 @@ import {
   AboutCom,
   Form,
   Services,
-  Profile,
   CompleteShipment,
   GetShipment,
   StartShipment,

@@ -63,7 +63,7 @@ export default ({ startModal, setStartModal, startShipment }) => {
 
               <SubmitButton
                 title={"Start shipment"}
-                handleClick={() => startShipment()}
+                handleClick={() => startShipping()}
               />
             </form>
           </div>
