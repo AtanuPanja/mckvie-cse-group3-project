@@ -9,7 +9,7 @@ export default function CustomerSection() {
         <div className=" flex justify-around px-5 pt-5 flex-wrap rounded-lg">
           <figure className="m-10">
             <Image
-              src="/shopping-bag.png"
+              src="/images/shopping-bag.png"
               alt="Shopper"
               title="Shopper"
               width="100"
@@ -19,7 +19,7 @@ export default function CustomerSection() {
           </figure>
           <figure className="m-10">
             <Image
-              src="/online-store.png"
+              src="/images/online-store.png"
               alt="EStore"
               title="EStore"
               width="100"
@@ -29,7 +29,7 @@ export default function CustomerSection() {
           </figure>
           <figure className="m-10">
             <Image
-              src="/mall.png"
+              src="/images/mall.png"
               alt="GenZ mall"
               title="GenZ mall"
               width="100"
